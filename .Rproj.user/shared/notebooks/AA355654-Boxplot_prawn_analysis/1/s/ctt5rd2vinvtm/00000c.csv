@@ -1,0 +1,5 @@
+"0",""
+"0","res3 <- res3 %>% add_xy_position(x = ""bottom.type"")"
+"0","ggboxplot(cpues3_20, x = ""bottom.type"", y = ""CPUE..kg.hr.P"", color = ""bottom.type"", palette = ""jco"",add = ""jitter"") +"
+"0","  stat_pvalue_manual(res2, hide.ns = TRUE) +"
+"0","  labs(subtitle = get_test_label(res.kruskal, detailed = TRUE))"

@@ -1,0 +1,3 @@
+"0","cpues1_09 = read.csv('cpues_zone1_2009.csv')"
+"0","cpues2_09 = read.csv('cpues_zone2_2009.csv')"
+"0","cpues3_09 = read.csv('cpues_zone3_2009.csv')"

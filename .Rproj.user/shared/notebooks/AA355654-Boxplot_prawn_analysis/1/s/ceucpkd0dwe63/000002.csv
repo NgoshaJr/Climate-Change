@@ -1,0 +1,2 @@
+"0","cpues1 = read.csv('prawn_zone1.csv')"
+"0","ggboxplot(cpues1, x = ""Mean.depth"" , y = ""Catch..Prawns..Kg."",palette = ""jco"",add = ""jitter"")"

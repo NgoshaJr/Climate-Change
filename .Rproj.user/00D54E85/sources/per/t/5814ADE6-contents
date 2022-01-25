@@ -1,0 +1,29 @@
+---
+title: "Lobsta-LBSPR"
+author: "Ngosha"
+date: "1/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(TropFishR)
+setwd("~/Ngosha Documents/SHORT COURSES/TropFishR")
+
+lfq1 <- read.csv('LFQ_Lobsta_data.csv')
+
+lfq1$date <- as.Date(lfq1$date, format = "%d/%m/%Y")
+
+lfq1new <- lfqCreate(data = lfq1, Lname = "clength", Dname = "date")
+
+plot(lfq1new, Fname = "catch")
+write.csv(lfq1new,'LFQtestLob.csv')
+```
+
+```{r}
+colnames(lfq1)
+```
+

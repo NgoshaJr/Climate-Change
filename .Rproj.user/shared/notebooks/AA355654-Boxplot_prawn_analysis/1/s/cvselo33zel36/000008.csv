@@ -1,0 +1,7 @@
+"0","##Pairwise comparisons"
+"0","#Based on the Kruskal-Wallis test we identified a significant difference, but we don’t which pair is significantly different. A pairwise comparison will help us to identify the significant pair."
+"0","##Based on the pairwise comparison significant difference was observed between sandy and sandy-muddy"
+"0",""
+"0","res1<- cpues1_20 %>%"
+"0","  dunn_test(CPUE..kg.hr.P  ~ bottom.type, p.adjust.method = ""bonferroni"")"
+"0","res1"

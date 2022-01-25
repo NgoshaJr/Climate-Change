@@ -1,0 +1,13 @@
+---
+title: The Role of Machine Learning as an Effective Approach for Solving Problems
+  in Earth Observation sciencies
+author: ''
+date: '2021-11-10'
+slug: []
+categories:
+  - ''
+tags:
+  - ''
+description: ''
+thumbnail: ''
+---

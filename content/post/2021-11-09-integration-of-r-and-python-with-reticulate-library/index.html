@@ -1,0 +1,53 @@
+---
+title: Integration of R and Python with Reticulate Library
+author: Mussa Ngosha
+date: '2021-11-09'
+slug: []
+categories:
+  - ''
+tags:
+  - ''
+description: ''
+thumbnail: ''
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Data scientists are highly interested to discover knowledge and extract insights from the data. R and Python are the robust languages that are frequently used when working with data. However, some Data scientists prefer to use only one language. Moreover, there is no clear reason of why some Data Scientists do prefer only on one language instead of the other?, to me I understand that, its an issue of Camps like R camps and Python camps whereby members are only competent in either languages. Furthermore, for those who are interested to use both R and Python on the same Integrated Development Environment (IDE) , instead of coding in different IDE, there is R package called ‘reticulate’: This package provides a user friendly IDE that allows coders and programmers to work with R and Python on the same environment.</p>
+<div id="how-to-setup-r-and-python-on-the-same-environment" class="section level3">
+<h3>HOW TO SETUP R AND PYTHON ON THE SAME ENVIRONMENT</h3>
+<div id="steps" class="section level4">
+<h4>STEPS:</h4>
+<ul>
+<li><p>Install reticulate package</p></li>
+<li><p>install.package(‘reticulate’)</p></li>
+<li><p>Load the library</p></li>
+<li><p>require(reticulate)</p></li>
+<li><p>Connect R and python</p></li>
+</ul>
+</div>
+</div>
+<div id="use_pythonindicate-the-directory-where-python-is-installed" class="section level3">
+<h3>use_python(Indicate the directory where python is installed)</h3>
+<div id="example-of-setting-up-r-and-python" class="section level5">
+<h5>Example of Setting up R and Python</h5>
+</div>
+<div id="load-reticulate-package" class="section level5">
+<h5>Load reticulate package</h5>
+<pre class="r"><code>### Example of Setting up R and Python 
+### Load reticulate package
+require(reticulate)</code></pre>
+<pre><code>## Loading required package: reticulate</code></pre>
+<pre><code>## Warning: package &#39;reticulate&#39; was built under R version 4.1.2</code></pre>
+<pre class="r"><code>### Use &#39;use_python&#39; fuction to specify the python language to be connected
+# For Anaconda
+use_python(&quot;C:/Users/dlab/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Anaconda3 (64-bit)&quot;)
+# For python 3.7
+use_python(&quot;C:/Users/dlab/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.7&quot;)
+
+### Note: (i) On the same environment, every language will run on its own chunk like r chunk and python chunk.
+## (ii) If you are using Rmarkdown, Ctrl+Alt+I to create a chunk for r, if you want a python chunk, create below
+## by placing Ctrl+Alt+I, the edit the latter r to python</code></pre>
+</div>
+</div>

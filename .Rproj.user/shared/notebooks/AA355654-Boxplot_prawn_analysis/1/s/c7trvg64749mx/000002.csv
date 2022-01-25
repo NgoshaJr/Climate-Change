@@ -1,0 +1,3 @@
+"0","cpues1_20 = read.csv('prawn_boxplot_zone1_2020.csv')"
+"0","cpues2_20 = read.csv('prawn_boxplot_zone2_2020.csv')"
+"0","cpues3_20 = read.csv('prawn_boxplot_zone3_2020.csv')"

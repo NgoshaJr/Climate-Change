@@ -1,0 +1,28 @@
+"0","library(""cowplot"")"
+"2","Warning:"
+"2"," package ‘cowplot’ was built under R version 4.1.2
+"
+"2","
+Attaching package: ‘cowplot’
+
+"
+"2","The following object is masked from ‘package:ggpubr’:
+
+    get_legend
+
+"
+"0","library(gridExtra)"
+"2","Warning:"
+"2"," package ‘gridExtra’ was built under R version 4.1.2
+"
+"2","
+Attaching package: ‘gridExtra’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    combine
+
+"
+"0","plot_grid(plt1, plt2,plt3, labels = c(""A)"", ""B)"", ""C)""),ncol = 2, nrow = 2)"
+"0",""

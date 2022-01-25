@@ -1,0 +1,3 @@
+"0","##Effect size"
+"0","#The effect size values normally interpreted as 0.01- < 0.06 (small effect), 0.06 – < 0.14 (moderate effect) and >= 0.14 (large effect)."
+"0","cpues1_20 %>% kruskal_effsize(CPUE..kg.hr.P  ~ bottom.type)"

@@ -1,0 +1,90 @@
+---
+title: Downlod, Analyse, and Visualize Malaria Data with MalariaAtlas Package in R
+author: Mussa Ngosha
+date: '2022-01-24'
+slug: []
+categories:
+  - ''
+tags:
+  - ''
+description: ''
+thumbnail: ''
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(DT)
+library(ggthemes)
+library(malariaAtlas)
+```
+Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable. In 2020, there were an estimated 241 million cases of malaria worldwide. The estimated number of malaria deaths stood at 627,000 in 2020. 
+
+The WHO African Region carries a disproportionately high share of the global malaria burden. In 2020, the region was home to 95% of malaria cases and 96% of malaria deaths. Children under 5 accounted for an estimated 80% of all malaria deaths in the Region (WHO, 2020).
+
+
+This post will show you how to use `MalariaAtlas` package to download, visualize and manipulate global malaria data hosted by the [Malaria Atlas Project](https://malariaatlas.org/). These data can be explored and downloaded interactively at data explorer. The fun part of this package is where you can chose a specific country of interest.
+
+The malariaAtlas package enables users to download three types of data:
+
+1. parasite rate (PR) survey data (Plasmodium falciparum and Plasmodium vivax)
+2. vector occurrence data
+3. administrative boundary shapefiles to visualise data
+rasters covering a range of modelled outputs related to malaria research such as predicted malaria parasite prevalence
+Installation of malariaAtlas package
+
+
+## Installation of malariaAtlas package
+The `malariaAtlas` package can be installed from CRAN and loaded as follows:
+install.packages("malariaAtlas")
+```{r load-lib}
+library(malariaAtlas)
+```
+## Checking available data
+
+The `malariaAtlas` package provides users with a convenient API to interact with the publicly available malaria data hosted by the Malaria Atlas Project.
+
+The following are functions from the `malariaAtlas`, these functions help you to work with malaria datasets from a specific country. 
++The `listData()` function helps retrieve a list of all the available data which can be downloaded, and is a wrapper for `listPoints()`, `listRaster()` and `listShp()`.
+We can find all countries that have PR survey points data with `listData(datatype = "pr points")`,
+and all countries with vector occurrence data with `listData(datatype = "vector points")`.
+We can also see raster data available with `listData(datatype = "raster")`,
+and shapefiles available with `listData(datatype = "shape")`.
+
+
+The `isAvailable_pr()` function can be used to check whether a specified country or location has PR survey points.
+Similarly, `isAvailable_vec()` checks whether a specified country or location has vector occurrence data.
+For example, we can check whether Tanzania has PR survey points and Kenya has vector occurrence data as follows:
+
+isAvailable_pr(country = "Tanzania",full_results = TRUE)
+
+isAvailable_vec(country = "Kenya",full_results = TRUE)
+
+```{r func_pr, message = FALSE}
+#isAvailable_pr(country = "Tanzania",full_results = TRUE)
+#isAvailable_vec(country = "Kenya",full_results = TRUE)
+```
+
+## Dowloading and visualising data
+
+### PR survey data for Tanzania
+The `getPR()` function downloads all the publicly available PR points for Tanzania and returns it as a dataframe. The `species` argument is a string specifying the Plasmodium species and can be `Pf`, `Pv` or `BOTH`.
+
+Tanzania_PR_data <- getPR(country = "Tanzania", species = "BOTH")
+head(Tanzania_PR_data)
+
+```{r get-pr,message = FALSE,warning=FALSE}
+#Tanzania_PR_data <- getPR(country = "Tanzania", species = "BOTH")
+#head(Tanzania_PR_data)
+```
+autoplot() can be used to quickly and easily visualise the downloaded PR survey points.
+
+```{r}
+#autoplot(Tanzania_PR_data)
+```
+
+
+
+
+
+
+

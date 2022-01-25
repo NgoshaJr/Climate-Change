@@ -1,0 +1,63 @@
+---
+title: Downlod, Analyse, and Visualize Malaria Data with MalariaAtlas Package in R
+author: Mussa Ngosha
+date: '2022-01-24'
+slug: []
+categories:
+  - ''
+tags:
+  - ''
+description: ''
+thumbnail: ''
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable. In 2020, there were an estimated 241 million cases of malaria worldwide. The estimated number of malaria deaths stood at 627,000 in 2020.</p>
+<p>The WHO African Region carries a disproportionately high share of the global malaria burden. In 2020, the region was home to 95% of malaria cases and 96% of malaria deaths. Children under 5 accounted for an estimated 80% of all malaria deaths in the Region (WHO, 2020).</p>
+<p>This post will show you how to use <code>MalariaAtlas</code> package to download, visualize and manipulate global malaria data hosted by the <a href="https://malariaatlas.org/">Malaria Atlas Project</a>. These data can be explored and downloaded interactively at data explorer. The fun part of this package is where you can chose a specific country of interest.</p>
+<p>The malariaAtlas package enables users to download three types of data:</p>
+<ol style="list-style-type: decimal">
+<li>parasite rate (PR) survey data (Plasmodium falciparum and Plasmodium vivax)</li>
+<li>vector occurrence data</li>
+<li>administrative boundary shapefiles to visualise data
+rasters covering a range of modelled outputs related to malaria research such as predicted malaria parasite prevalence
+Installation of malariaAtlas package</li>
+</ol>
+<div id="installation-of-malariaatlas-package" class="section level2">
+<h2>Installation of malariaAtlas package</h2>
+<p>The <code>malariaAtlas</code> package can be installed from CRAN and loaded as follows:
+install.packages(“malariaAtlas”)</p>
+<pre class="r"><code>library(malariaAtlas)</code></pre>
+</div>
+<div id="checking-available-data" class="section level2">
+<h2>Checking available data</h2>
+<p>The <code>malariaAtlas</code> package provides users with a convenient API to interact with the publicly available malaria data hosted by the Malaria Atlas Project.</p>
+<p>The following are functions from the <code>malariaAtlas</code>, these functions help you to work with malaria datasets from a specific country.
++The <code>listData()</code> function helps retrieve a list of all the available data which can be downloaded, and is a wrapper for <code>listPoints()</code>, <code>listRaster()</code> and <code>listShp()</code>.
+We can find all countries that have PR survey points data with <code>listData(datatype = "pr points")</code>,
+and all countries with vector occurrence data with <code>listData(datatype = "vector points")</code>.
+We can also see raster data available with <code>listData(datatype = "raster")</code>,
+and shapefiles available with <code>listData(datatype = "shape")</code>.</p>
+<p>The <code>isAvailable_pr()</code> function can be used to check whether a specified country or location has PR survey points.
+Similarly, <code>isAvailable_vec()</code> checks whether a specified country or location has vector occurrence data.
+For example, we can check whether Tanzania has PR survey points and Kenya has vector occurrence data as follows:</p>
+<p>isAvailable_pr(country = “Tanzania”,full_results = TRUE)</p>
+<p>isAvailable_vec(country = “Kenya”,full_results = TRUE)</p>
+<pre class="r"><code>#isAvailable_pr(country = &quot;Tanzania&quot;,full_results = TRUE)
+#isAvailable_vec(country = &quot;Kenya&quot;,full_results = TRUE)</code></pre>
+</div>
+<div id="dowloading-and-visualising-data" class="section level2">
+<h2>Dowloading and visualising data</h2>
+<div id="pr-survey-data-for-tanzania" class="section level3">
+<h3>PR survey data for Tanzania</h3>
+<p>The <code>getPR()</code> function downloads all the publicly available PR points for Tanzania and returns it as a dataframe. The <code>species</code> argument is a string specifying the Plasmodium species and can be <code>Pf</code>, <code>Pv</code> or <code>BOTH</code>.</p>
+<p>Tanzania_PR_data &lt;- getPR(country = “Tanzania”, species = “BOTH”)
+head(Tanzania_PR_data)</p>
+<pre class="r"><code>#Tanzania_PR_data &lt;- getPR(country = &quot;Tanzania&quot;, species = &quot;BOTH&quot;)
+#head(Tanzania_PR_data)</code></pre>
+<p>autoplot() can be used to quickly and easily visualise the downloaded PR survey points.</p>
+<pre class="r"><code>#autoplot(Tanzania_PR_data)</code></pre>
+</div>
+</div>

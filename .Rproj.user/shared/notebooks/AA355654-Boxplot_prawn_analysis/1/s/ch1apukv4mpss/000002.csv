@@ -1,0 +1,3 @@
+"0","## Kruskal Wallis Test"
+"0","res.kruskal <- cpues1 %>% kruskal_test(Catch..Prawns..Kg. ~ bottom.type)"
+"0","res.kruskal"

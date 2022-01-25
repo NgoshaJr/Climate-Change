@@ -1,0 +1,49 @@
+---
+title: Integration of R and Python with Reticulate Library
+author: Mussa Ngosha
+date: '2021-11-09'
+slug: []
+categories:
+  - ''
+tags:
+  - ''
+description: ''
+thumbnail: ''
+---
+Data scientists are highly interested to discover knowledge and extract insights from the data. R and Python are the robust languages that are frequently used when working with data. However, some Data scientists prefer to use only one language. Moreover, there is no clear reason of why some Data Scientists do prefer only on one language instead of the other?, to me I understand that, its an issue of Camps like R camps and Python camps whereby members are only competent in either languages. Furthermore, for those who are interested to use both R and Python on the same Integrated Development Environment (IDE)  , instead of coding in different IDE, there is R package called 'reticulate': This package provides a user friendly IDE that allows coders and programmers to work with R and Python on the same environment.
+
+### HOW TO SETUP R AND PYTHON ON THE SAME ENVIRONMENT 
+#### STEPS:
+
++ Install reticulate package
+
++ install.package('reticulate')
+
++ Load the library
+
++ require(reticulate)
+   
++ Connect R and python
+
+### use_python(Indicate the directory where python is installed)
+
+##### Example of Setting up R and Python 
+##### Load reticulate package
+```{r}
+### Example of Setting up R and Python 
+### Load reticulate package
+require(reticulate)
+### Use 'use_python' fuction to specify the python language to be connected
+# For Anaconda
+use_python("C:/Users/dlab/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Anaconda3 (64-bit)")
+# For python 3.7
+use_python("C:/Users/dlab/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.7")
+
+### Note: (i) On the same environment, every language will run on its own chunk like r chunk and python chunk.
+## (ii) If you are using Rmarkdown, Ctrl+Alt+I to create a chunk for r, if you want a python chunk, create below
+## by placing Ctrl+Alt+I, the edit the latter r to python
+```
+
+
+
+

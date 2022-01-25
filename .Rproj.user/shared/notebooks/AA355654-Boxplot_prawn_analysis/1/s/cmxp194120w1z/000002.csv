@@ -1,0 +1,4 @@
+"0","res1 <- res1 %>% add_xy_position(x = ""bottom.type"")"
+"0","ggboxplot(cpues1, x = ""bottom.type"", y = ""Catch..Prawns..Kg."", color = ""bottom.type"", palette = ""jco"",add = ""jitter"") +"
+"0","  stat_pvalue_manual(res1, hide.ns = TRUE) +"
+"0","  labs(subtitle = get_test_label(res.kruskal, detailed = TRUE))"

@@ -1,0 +1,3 @@
+"0","## Kruskal Wallis Test"
+"0","res.kruskal <- cpues1_20 %>% kruskal_test(CPUE..kg.hr.P ~ bottom.type)"
+"0","res.kruskal"

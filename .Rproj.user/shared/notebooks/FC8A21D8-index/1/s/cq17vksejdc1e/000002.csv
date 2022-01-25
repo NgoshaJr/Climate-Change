@@ -1,0 +1,2 @@
+"0","#Tanzania_PR_data <- getPR(country = ""Tanzania"", species = ""BOTH"")"
+"0","#head(Tanzania_PR_data)"

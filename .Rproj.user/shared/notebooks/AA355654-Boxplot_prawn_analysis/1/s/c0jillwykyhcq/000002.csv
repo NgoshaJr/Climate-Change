@@ -1,0 +1,1 @@
+"0","plt1<-ggplot(cpues1, aes(x = Mean.depth, y = Catch..Prawns..Kg.))+ geom_bar(stat = ""identity"", width=0.4)"

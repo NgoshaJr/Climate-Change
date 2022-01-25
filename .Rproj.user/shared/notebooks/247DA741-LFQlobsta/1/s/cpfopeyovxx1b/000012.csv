@@ -1,0 +1,4 @@
+"0","write.csv(lfq1new,'LFQtestLob.csv')"
+"2","Error in as.data.frame.default(x[[i]], optional = TRUE, stringsAsFactors = stringsAsFactors) : 
+  cannot coerce class ‘""lfq""’ to a data.frame
+"

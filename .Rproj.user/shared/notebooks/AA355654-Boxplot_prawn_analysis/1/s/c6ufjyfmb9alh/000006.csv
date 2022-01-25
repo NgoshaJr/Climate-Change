@@ -1,0 +1,3 @@
+"0","res3<- cpues1 %>%"
+"0","  dunn_test(Catch..Prawns..Kg. ~ bottom.type, p.adjust.method = ""bonferroni"")"
+"0","res3"
